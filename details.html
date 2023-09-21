@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
+    <title>Document</title>
 
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -16,38 +14,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
-
+    
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
 </head>
 
 <body>
-    <section class="content">
-        <h1>Pokedex</h1>
-        <div class="container">
-        <form action="details.html" method="get">
-            <input type="text" name="pokemonName" id="search" placeholder="Search for Any Pokemon!">
-            <button type="submit">Pesquisar</button>
-        </form>
+    <div class="container">
+        <h1>Pokémon Details</h1>
+        <div id="pokemon-info" class="hidden">
+            <div id="pokemon-image"></div>
+            <div id="pokemon-details">
+                <h2 id="pokemon-name"></h2>
+            </div>
         </div>
-        
-        <ol id="pokemonList" class="pokemons">
-            <!-- ..... Pokémons aqui! ..... -->
-        </ol>
+        <button id="returnButton" type="button" onclick="returnToPokedex()">
+            Refresh!
+        </button>
+    </div>
 
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
-        </div>
-    </section>
-
-    <!-- Nosso Javascript -->
-    <script src="/assets/js/pokemon-model.js"></script>
-    <script src="/assets/js/poke-api.js"></script>
-    <script src="/assets/js/main.js"></script>
     <script src="/assets/js/search-api.js"></script>
 </body>
-
 </html>
